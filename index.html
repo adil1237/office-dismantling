@@ -242,5 +242,23 @@
   <a href="https://wa.me/917836004621">WhatsApp</a>
 </div>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'call_click');
+      });
+    });
+
+    document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click');
+      });
+    });
+
+  });
+</script>
+  
 </body>
 </html>
